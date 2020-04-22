@@ -65,7 +65,7 @@ Configuration CIS_Windows10_v181 {
         # 2.2.6 (L1) Ensure 'Allow log on through Remote Desktop Services' is set to 'Administrators, Remote Desktop Users'
         UserRightsAssignment AllowlogonthroughRemoteDesktopServices {
             Policy       = 'Allow_log_on_through_Remote_Desktop_Services'
-            Identity     = 'Administrators, Remote Desktop Users'
+            Identity     = 'Administrators, Users'
         }
 
         # 2.2.7 (L1) Ensure 'Back up files and directories' is set to 'Administrators'
@@ -149,7 +149,7 @@ Configuration CIS_Windows10_v181 {
         # 2.2.20 (L1) Ensure 'Deny log on through Remote Desktop Services' is set to 'Guests, Local account'
         UserRightsAssignment DenylogonthroughRemoteDesktopServices {
             Policy       = 'Deny_log_on_through_Remote_Desktop_Services'
-            Identity     = 'Guests, Local account'
+            Identity     = 'Guests'
         }
 
         # 2.2.21 (L1) Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One'
@@ -590,7 +590,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasAuto'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '4'
+            ValueData   = '2'
         } 
 
         # 5.21 (L2) Ensure 'Remote Desktop Configuration (SessionEnv)' is set to 'Disabled'
@@ -599,7 +599,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SessionEnv'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '4'
+            ValueData   = '2'
         } 
 
         # 5.22 (L2) Ensure 'Remote Desktop Services (TermService)' is set to 'Disabled'
@@ -608,7 +608,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TermService'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '4'
+            ValueData   = '2'
         } 
 
         # 5.23 (L2) Ensure 'Remote Desktop Services UserMode Port Redirector (UmRdpService)' is set to 'Disabled'
@@ -617,7 +617,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UmRdpService'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '4'
+            ValueData   = '2'
         } 
 
         # 5.24 (L1) Ensure 'Remote Procedure Call (RPC) Locator (RpcLocator)' is set to 'Disabled'
@@ -626,7 +626,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RpcLocator'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '4'
+            ValueData   = '2'
         } 
 
         # 5.25 (L2) Ensure 'Remote Registry (RemoteRegistry)' is set to 'Disabled'
@@ -635,7 +635,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteRegistry'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '4'
+            ValueData   = '2'
         } 
 
         # 5.26 (L1) Ensure 'Routing and Remote Access (RemoteAccess)' is set to 'Disabled'
@@ -644,7 +644,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '4'
+            ValueData   = '2'
         } 
 
         # 5.27 (L2) Ensure 'Server (LanmanServer)' is set to 'Disabled'
@@ -761,7 +761,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinRM'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '4'
+            ValueData   = '2'
         } 
 
         # 5.40 (L1) Ensure 'World Wide Web Publishing Service (W3SVC)' is set to 'Disabled' or 'Not Installed'
@@ -2334,15 +2334,6 @@ Configuration CIS_Windows10_v181 {
             ValueData  = '0'
         }
 
-        # 19.1.3.1 (L1) Ensure 'Enable screen saver' is set to 'Enabled'
-        Registry 'ScreenSaveActive' {
-            Ensure      = 'Present'
-            Key         = 'HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop'
-            ValueName   = 'ScreenSaveActive'
-            ValueType   = 'String'
-            ValueData   = '1'
-        }
-
         # 18.8.31.1 (L2) Ensure 'Allow Clipboard synchronization across devices' is set to 'Disabled'
         Registry 'AllowCrossDeviceClipboard' {
             Ensure     = 'Present'
@@ -3691,7 +3682,7 @@ Configuration CIS_Windows10_v181 {
             Key        = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service'
             ValueName  = 'AllowAutoConfig'
             ValueType  = 'DWord'
-            ValueData  = '0'
+            ValueData  = '1'
         }
 
         #  18.9.97.2.3 (L1) Ensure 'Allow unencrypted traffic' is set to 'Disabled'

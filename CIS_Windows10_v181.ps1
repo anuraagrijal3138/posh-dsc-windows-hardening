@@ -590,7 +590,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasAuto'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '2'
+            ValueData   = '4'
         } 
 
         # 5.21 (L2) Ensure 'Remote Desktop Configuration (SessionEnv)' is set to 'Disabled'
@@ -599,7 +599,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SessionEnv'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '2'
+            ValueData   = '4'
         } 
 
         # 5.22 (L2) Ensure 'Remote Desktop Services (TermService)' is set to 'Disabled'
@@ -608,7 +608,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TermService'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '2'
+            ValueData   = '4'
         } 
 
         # 5.23 (L2) Ensure 'Remote Desktop Services UserMode Port Redirector (UmRdpService)' is set to 'Disabled'
@@ -617,7 +617,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UmRdpService'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '2'
+            ValueData   = '4'
         } 
 
         # 5.24 (L1) Ensure 'Remote Procedure Call (RPC) Locator (RpcLocator)' is set to 'Disabled'
@@ -626,7 +626,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RpcLocator'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '2'
+            ValueData   = '4'
         } 
 
         # 5.25 (L2) Ensure 'Remote Registry (RemoteRegistry)' is set to 'Disabled'
@@ -635,7 +635,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteRegistry'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '2'
+            ValueData   = '4'
         } 
 
         # 5.26 (L1) Ensure 'Routing and Remote Access (RemoteAccess)' is set to 'Disabled'
@@ -644,7 +644,7 @@ Configuration CIS_Windows10_v181 {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess'
             ValueName   = 'Start'
             ValueType   = 'DWord'
-            ValueData   = '2'
+            ValueData   = '4'
         } 
 
         # 5.27 (L2) Ensure 'Server (LanmanServer)' is set to 'Disabled'

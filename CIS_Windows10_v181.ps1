@@ -3258,7 +3258,7 @@ Configuration CIS_Windows10_v181 {
             Key        = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore'
             ValueName  = 'DisableStoreApps'
             ValueType  = 'DWord'
-            ValueData  = '1'
+            ValueData  = '0'
         }
 
         # 18.9.69.2 (L1) Ensure 'Only display the private store within the Microsoft Store' is set to 'Enabled'
